@@ -1,1 +1,1 @@
-# E-bus-project-using-html-cs-jss
+The E-Bus Ticket Booking Website is a responsive platform for booking eco-friendly electric bus travel. Users can enter trip details and submit bookings through a clean, modern interface. All booking data is securely stored in Google Sheets using Google Apps Script, creating a simple, serverless online ticket system.
