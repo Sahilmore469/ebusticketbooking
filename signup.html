@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+
+    <div class="signup-box">
+        <h1>Sign Up</h1>
+        <h4>It's free and only takes a minute</h4>
+
+        <form id="signup-form">
+
+            <label>First Name</label>
+            <input type="text" id="first-name" placeholder="First Name" required>
+
+            <label>Last Name</label>
+            <input type="text" id="last-name" placeholder="Last Name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <p>
+            By clicking the Sign Up button, you agree to our <br>
+            <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+        </p>
+    </div>
+
+    <p class="para-2">
+        Already have an account? <a href="login.html">Login Here</a>
+    </p>
+
+    <!-- WORKING JS VALIDATION -->
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('first-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (!firstName) {
+                alert('Please enter your first name.');
+                return;
+            }
+
+            if (!lastName) {
+                alert('Please enter your last name.');
+                return;
+            }
+
+            if (!email) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            alert('Registration successful!');
+            document.getElementById('signup-form').reset();
+        });
+    </script>
+
+</body>
+</html>

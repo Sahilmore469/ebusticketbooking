@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - E Bus</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header>
+    <h1>Contact E <span style="color: white;">Bus</span></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-bg">
+    <div class="content-card">
+  
+        <h2>Query</h2>
+  
+        <form id="contact-form">
+  
+            <label>Name:</label>
+            <input type="text" id="name">
+  
+            <label>Email:</label>
+            <input type="email" id="email">
+  
+            <label>Message:</label>
+            <textarea id="message" rows="5"></textarea>
+  
+            <button type="submit">Send</button>
+        </form>
+  
+    </div>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 E Bus. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const nameError = document.getElementById('name-error');
+      const emailError = document.getElementById('email-error');
+      const messageError = document.getElementById('message-error');
+
+      nameError.style.display = 'none';
+      emailError.style.display = 'none';
+      messageError.style.display = 'none';
+
+      let isValid = true;
+
+      if (!name) {
+        nameError.style.display = 'block';
+        isValid = false;
+      }
+      if (!email) {
+        emailError.style.display = 'block';
+        isValid = false;
+      }
+      if (!message) {
+        messageError.style.display = 'block';
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert('Thank you, ' + name + '! Your message has been sent successfully.');
+        document.getElementById('contact-form').reset();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Common layout for About, Services, Contact pages */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+  background-color: rgb(7, 113, 219);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: yellow;
+}
+
+/* Background wrapper for all pages */
+.page-bg {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("bus2.jpg"); /* Change to any background */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* Main card area */
+.content-card {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* Titles */
+.content-card h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(7, 113, 219);
+}
+
+/* Paragraphs */
+.content-card p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Services Styling */
+.service-item {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+}
+
+.service-item h3 {
+  color: rgb(7,113,219);
+  margin-bottom: 10px;
+}
+
+/* Contact Form Styling */
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgb(7, 113, 219);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#contact-form button {
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: darkgreen;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+/* BOOKING FORM CLEAN DESIGN */
+
+#book-ticket {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(7, 113, 219);
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.book-btn {
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background-color: darkgreen;
+}
+
+
+.page-bg {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("bus2.jpg"); /* or booking-bg.jpg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.content-card {
+  width: 100%;
+  max-width: 550px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
